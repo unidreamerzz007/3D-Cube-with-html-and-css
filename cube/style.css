@@ -1,0 +1,88 @@
+body{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  background-image: radial-gradient(farthest-corner at 40px 40px,rgb(230, 84, 108) 0%, rgb(56, 110, 190) 100%);
+  perspective: 580px;
+  transition: all ease 0.5s;
+}
+
+body:hover{
+  perspective: 1500px;
+}
+
+.container{
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transition: all 10s;
+  transform: rotateZ(0) rotateX(0) rotateY(0);
+  transform-style:preserve-3d ;
+}
+
+.container:hover{
+  transform: rotateZ(0) rotateY(310deg) rotateX(90deg);
+}
+.box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:nth-child(1){
+  background-image: url(1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotateY(90deg) translateX(-150px);
+}
+.box:nth-child(2){
+  background-image: url(2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center right;
+  transform: rotateY(-90deg) translateX(150px);
+}
+.box:nth-child(3){
+  background-image: url(3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center top;
+  transform: rotateX(-90deg) translateY(-150px)
+}
+.box:nth-child(4){
+  background-image: url(4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotateX(90deg) translateY(150px);
+}
+.box:nth-child(5){
+  background-image: url(5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateZ(-150px);
+}
+.box:nth-child(6){
+  background-image: url(6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateZ(150px);
+}
